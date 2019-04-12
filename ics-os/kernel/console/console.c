@@ -757,6 +757,14 @@ int console_execute(const char *str){
          printf("Missing parameter.\n");
       }
    }else
+      if (strcmp(u,"add") == 0){ //-- Adds two integers. Args: <num1> <num2>
+         int a, b;
+         u = strtok(0," ");
+         a = atoi(u);
+         u = strtok(0," ");
+         b = atoi(u);
+         printf("%d + %d = %d\n",a,b,a+b);
+}else
    if (strcmp(u,"ren") == 0){            //-- Renames a file. Args: <oldname> <newname>
       char *u2,*u3;
       u2=strtok(0," ");
